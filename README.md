@@ -72,28 +72,28 @@
 
 	```
 	[hadoop@ip-172-31-56-229 lab-hadoop-streaming]$ hadoop fs -ls
-Found 1 items
-drwxr-xr-x   - hadoop hadoop          0 2019-02-01 23:33 gutenberg-word-count
-[hadoop@ip-172-31-56-229 lab-hadoop-streaming]$ hadoop fs -ls gutenberg-word-count/
-Found 4 items
--rw-r--r--   1 hadoop hadoop          0 2019-02-01 23:33 gutenberg-word-count/_SUCCESS
--rw-r--r--   1 hadoop hadoop  267630729 2019-02-01 23:32 gutenberg-word-count/part-00000
--rw-r--r--   1 hadoop hadoop  267477980 2019-02-01 23:33 gutenberg-word-count/part-00001
--rw-r--r--   1 hadoop hadoop  267519115 2019-02-01 23:31 gutenberg-word-count/part-00002
-[hadoop@ip-172-31-56-229 lab-hadoop-streaming]$ hadoop fs -cat gutenberg-word-count/part-00000 | head
-on,	2
-**This	2
-!"--is	2
-!)	8
-!..._	2
-!_	20
-!_...	2
-!fit	2
-"!--la	1
-"!Viel	2
-cat: Unable to write to output stream.
-[hadoop@ip-172-31-56-229 lab-hadoop-streaming]$
-```	
+	Found 1 items
+	drwxr-xr-x   - hadoop hadoop          0 2019-02-01 23:33 gutenberg-word-count
+	[hadoop@ip-172-31-56-229 lab-hadoop-streaming]$ hadoop fs -ls gutenberg-word-count/
+	Found 4 items
+	-rw-r--r--   1 hadoop hadoop          0 2019-02-01 23:33 gutenberg-word-count/_SUCCESS
+	-rw-r--r--   1 hadoop hadoop  267630729 2019-02-01 23:32 gutenberg-word-count/part-00000
+	-rw-r--r--   1 hadoop hadoop  267477980 2019-02-01 23:33 gutenberg-word-count/part-00001
+	-rw-r--r--   1 hadoop hadoop  267519115 2019-02-01 23:31 gutenberg-word-count/part-00002
+	[hadoop@ip-172-31-56-229 lab-hadoop-streaming]$ hadoop fs -cat gutenberg-word-count/part-00000 | head
+	on,	2
+	**This	2
+	!"--is	2
+	!)	8
+	!..._	2
+	!_	20
+	!_...	2
+	!fit	2
+	"!--la	1
+	"!Viel	2
+	cat: Unable to write to output stream.
+	[hadoop@ip-172-31-56-229 lab-hadoop-streaming]$
+	```	
 	
 	
 2. Let's explore scalability and paralleism by increasing the size of the cluster by adding four more *Task* nodes and re-running the streaming job.
